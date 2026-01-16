@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    color: red;
+}
+
+.title {
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.search {
+    width: 200px;
+    height: 35px;
+    margin: auto;
+    display: block;
+    padding: 0px 10px;
+    text-transform: capitalize;
+    border: 2px solid red;
+}
+
+.search:focus {
+    border: 2px solid green;
+    outline: none;
+    color: green;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0px;
+}
+
+h2 {
+    margin: 5px 0px 3px;
+}
+
+.type {
+    text-transform: uppercase;
+    margin: 3px 0px;
+}
