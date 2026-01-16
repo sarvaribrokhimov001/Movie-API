@@ -1,4 +1,4 @@
-const api = `http://www.omdbapi.com/?s=merlin&apikey=f2dd26fe`;
+const api = `https://www.omdbapi.com/?s=merlin&apikey=f2dd26fe`;
 const elCards = document.querySelector(".cards");
 const elLoading = document.querySelector(".loading");
 const elSearch = document.querySelector(".search");
@@ -11,7 +11,7 @@ const elSearch = document.querySelector(".search");
 elSearch.addEventListener('change' , (e) => {
     const inputValue = e.target.value.trim();
     elCards.innerHTML = '';
-    getMovie(`http://www.omdbapi.com/?s=${inputValue}&apikey=f2dd26fe`);
+    getMovie(`https://www.omdbapi.com/?s=${inputValue}&apikey=f2dd26fe`);
 });
 
 try {
