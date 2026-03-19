@@ -1,3 +1,4 @@
+"use strict";
 
   Toastify({
     text: "Movie API ga xush kelibsiz !",
@@ -50,23 +51,21 @@ try {
 }
 
 function showMovies(showmovies) {
-    const {Search , Response , totalResults} = showmovies;
+    const {Search , Response} = showmovies;
 
     if(Response === 'True' ) {
         elLoading.innerHTML = '';
-        Search?.map(({Poster , Year , Title , Type} , index) => {
-        elCards.innerHTML += `
-            
-        <div class="card">
-            <img width="300" height="350" src=${Poster} alt="">
-            <h2> ${Title} </h2>
-            <p class="type"> ${Type} </p>
-            <p> ${Year} </p>
-        </div> <!-- card -->
-        
+
+        Search?.map(({Poster , Year , Title , Type}) => {
+          elCards.innerHTML += `
+            <div class="card">
+              <img width="300" height="350" src=${Poster} alt="">
+              <h2> ${Title} </h2>
+              <p class="type"> ${Type} </p>
+              <p> ${Year} </p>
+            </div> <!-- card -->
             `
- console.log(showmovies);
-          
+          console.log(showmovies);
         });
     } else {
         elLoading.innerHTML = '';
